@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="1.js/template-web.js"></script>
+    <link rel="stylesheet" href="./1.js/system.css">
+</head>
+<style></style>
+
+<body>
+    <div class="box">
+        <h3>员工工资管理系统</h3>
+        <div class="chazhao">
+            <input type="text" placeholder="输入姓名查询" class='find'>
+            <button id="chazhao">查询</button>
+            <button id="add">添加</button>
+        </div>
+        <table>
+            <tr>
+                <th>姓名</th>
+                <th>性别</th>
+                <th>底薪</th>
+                <th>罚款</th>
+                <th>实发</th>
+                <th>改删</th>
+            </tr>
+
+        </table>
+        <table id="shuju">
+        </table>
+    </div>
+    <div class="mask">
+        <ul>
+            <li>姓名：<input type="text" class="name"></li>
+            <li>性别：<input type="text" class="sex"></li>
+            <li>底薪：<input type="text" class="yw"></li>
+            <li>罚款：<input type="text" class="sx"></li>
+            <li>实发：<input type="text" class="yy"></li>
+            <button id="yes">确认</button>
+            <button id="no">取消</button>
+        </ul>
+    </div>
+    <div id="panduan">
+        删除信息
+        <div id='qd'>确定</div>
+        <div id="qx">取消</div>
+    </div>
+    </div>
+</body>
+<script type="text/html" id="shu">
+    {{each shu value}}
+    <tr>
+        <td>{{value.name}}</td>
+        <td>{{value.sex}}</td>
+        <td>{{value.yw}}</td>
+        <td>{{value.sx}}</td>
+        <td>{{value.yy}}</td>
+        <td>
+            <button class='xiugai'>修改</button>
+            <button class='shanchu'>删除</button>
+        </td>
+    </tr>
+    {{/each}}
+</script>
+
+<script src="1.js/system.js"></script>
+
+</html>
